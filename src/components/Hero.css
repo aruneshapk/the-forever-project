@@ -1,0 +1,162 @@
+/* --- 1. Main Layout Structure --- */
+.hero {
+  min-height: 100vh;
+  background-color: var(--bg-color); /* Dark theme to match Navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 70px; /* Space so content doesn't hide under Navbar */
+  overflow: hidden;
+}
+
+.hero-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The Magic Divider - Splits screen into two equal halves */
+.hero-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+/* --- 2. Left Side (Text Content) --- */
+.hero-left {
+  flex: 1; /* Takes up 50% width */
+  text-align: left;
+}
+
+.hero-greeting {
+  font-size: 1.5rem;
+  color: #007bff; /* Signature Blue */
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.hero-name {
+  font-size: 4rem;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #adb5bd;
+  margin-bottom: 40px;
+  height: 2.5rem; /* Prevents layout jump while typing */
+}
+
+/* --- 3. Buttons --- */
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-resume {
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-contact {
+  padding: 12px 30px;
+  border: 2px solid #007bff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* --- 4. Right Side (Profile Image) --- */
+.hero-right {
+  flex: 1; /* Takes up 50% width */
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 600px;
+  height: 400px;
+  border-radius: 0%;
+  overflow: hidden;
+  border: 4px thin #007bff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.15);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the photo from stretching */
+}
+
+/* --- 5. Typing Animation & Cursor --- */
+.typewriter {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.cursor {
+  color: #007bff;
+  font-weight: 100;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- 6. Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  .hero-split {
+    flex-direction: column-reverse; /* Stacks image on top on mobile */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .image-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+}
