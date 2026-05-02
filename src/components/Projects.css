@@ -1,0 +1,154 @@
+/* --- 1. Main Section Layout --- */
+.projects-section {
+  padding: 80px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #007bff;
+}
+
+/* --- 2. The Main Container Box (Matching Experience Section) --- */
+.projects-main-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 3. Responsive Project Grid --- */
+.projects-grid {
+  display: grid;
+  /* Automatically wraps cards based on available space */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* --- 4. Individual Project Card Styling --- */
+.project-card {
+  background-color: var(
+    --bg-color
+  ); /* Inset look using the theme's base background */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  /* Reveal Animation Initial State */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Reveal Trigger (Applied via Intersection Observer in JS) */
+.project-card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: #2a2e37;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+/* --- 5. Typography & Content --- */
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  /* Updated to blue to match the section title style */
+  color: #007bff;
+}
+
+.project-description {
+  color: #adb5bd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* --- 6. Tech Stack Tags --- */
+.tech-stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background-color: var(--card-bg);
+  color: #adb5bd;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #6c757d;
+}
+
+/* --- 7. Links & Buttons --- */
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-align: center;
+  flex: 1;
+}
+
+.btn-outline {
+  border: 1px solid var(--text-main);
+  color: #adb5bd;
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+/* --- 8. Animation Staggering --- */
+.projects-grid div:nth-child(2).reveal {
+  transition-delay: 0.1s;
+}
+.projects-grid div:nth-child(3).reveal {
+  transition-delay: 0.2s;
+}
+
+/* --- 9. Mobile Adjustments --- */
+@media (max-width: 768px) {
+  .projects-main-box {
+    padding: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

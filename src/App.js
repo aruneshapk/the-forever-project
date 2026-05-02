@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import { ThemeProvider } from './context/ThemeContext';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Experience />
-      {/* ... other sections */}
+      <Projects/>    
     </ThemeProvider>
   );
 }
