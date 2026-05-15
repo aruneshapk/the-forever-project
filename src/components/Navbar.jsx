@@ -1,6 +1,6 @@
-import React from "react";
-import "./Navbar.css";
-import { useTheme } from "../context/ThemeContext";
+import React from 'react';
+import './Navbar.css';
+import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -10,22 +10,14 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-logo">
           <button onClick={toggleTheme} className="theme-toggle">
-            {isDarkMode ? " ☀️ " : " 🌙 "}
+            {isDarkMode ? ' ☀️ ' : ' 🌙 '}
           </button>
         </div>
 
         <ul className="nav-links">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          {/* <li><a href="#about">About</a></li> */}
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          {/* <li><a href="#contact">Contact</a></li> */}
-          <li>
-            <a href="#projects">Featured Work</a>
-          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Featured Work</a></li>
         </ul>
       </div>
     </nav>

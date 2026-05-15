@@ -8,7 +8,6 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-      {/* THIS DIV IS CRITICAL */}
       <div className={isDarkMode ? 'dark-theme' : 'light-theme'}>
         {children}
       </div>
