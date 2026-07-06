@@ -33,10 +33,8 @@ const workData = [
     duration: 'June 2024 – April 2026',
     points: [
       'Implemented an event-driven notifications pipeline across backend and frontend to notify users of Java runtime updates and security vulnerability findings. Used OCI Notifications Service (ONS) Pub/Sub to fan out events across target topics and leveraged OCI Streaming Service for real-time consumption by distributed components.',
-      'Built and shipped production-grade UI from scratch for JMS Kubernetes support. Also built Java lifecycle management UI from scratch — added update functionality for Java runtimes across Managed Instances and applications, and built the Blackout Scheduler to restrict auto-updates around a pattern, schedule or timeline.',
-      'Migrated 10–15% of total screens from React to the in-house OCI framework under a security mandate. Served on-call for 4 weeks. Cut delivery estimates by 2 weeks across features using Codex and Cline for Unit and Playwright tests.',
-      'Designed and prototyped 33 Figma mockups. Presented before UX review boards and collaborated with PM and Tech Lead teams.',
-      
+      'Took end-to-end ownership of JMS Kubernetes UI (React) from UX design to production for Java container applications. Leveraged React Hooks to aggregate table data from multiple sources and integrate REST APIs. Walked-through entire feature, demonstrating feature utility and working to 60+ Engineers.',
+      'Built scalable microservices and REST APIs in Java and Dropwizard, applying OOPs, multithreading, and system design principles. Contributed to schema design for Blackout Scheduler and implemented Guava cache resulting in reduced database lookups and dropping API failure rates significantly.',
     ],
     skills: [
       { name: 'React',      icon: ICONS.react,      pos: 'pos-5' },
